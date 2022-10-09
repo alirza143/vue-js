@@ -1,6 +1,5 @@
-# This Lession about variable/dynamic
-Every component must have data function which always return data
-
+# This Lession about attribute binding/make id dynamic
+usign directive v-bind:<html_attribute>
 # tool use
 
 Vs-code

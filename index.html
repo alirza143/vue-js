@@ -20,12 +20,21 @@
 <body>
     
     <div id="app">
+
+        <!-- One way -->
+        <a v-bind:href="url">google</a>
+        <!-- Other way -->
+        <a :href="url">goole :</a>
+
         <div v-if="showBooks">
             <p>{{ books[0].title }} {{books[0].author }}</p>
             <p>{{ books[1].title }} {{ books[1].author }}</p>
 
             <ul>
-                <li v-for="item in books">{{item.title}} - {{item.author}}</li>
+                <li v-for="item in books">
+                    <img height="50" width="50" :src="item.img" :alt="item.title"> 
+                    {{item.title}} - {{item.author}}
+                </li>
             </ul>
         </div>
     </div>
