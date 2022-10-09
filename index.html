@@ -10,14 +10,21 @@
 <body>
     
     <div id="app">
-        <p>{{title}} - {{author}} - {{age}}</p>  
-        <button v-on:click="age++">Increase Age</button>
-        <button v-on:click="age--">Increase Age</button>
-        <button @click="title='New Title'">Change Title</button>
-        <!-- we can update this protery from app.js -->
-        <button @click="changeTitle">Change Title</button>
-        <!-- we can pass the argument -->
-        <button @click="changeTitleWithArgument('change Title With Argument')">changeTitleWithArgument</button>
+        
+        <!-- v-if remove the dom element complete and inject it on true -->
+        <span v-if="showBooks">{{title}}</span>
+        <span v-if="true">- {{author}}</span>
+        <span v-if="true">- {{age}}</span>
+        
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-if="!showBooks">Show Books</span>
+            <!-- we can use else also -->
+            <span v-else>Show Books else</span>
+        </button>
+
+        <!-- this only use css to display and display-none -->
+        <div v-show="showBooks">{{title}}</div>
 
     </div>
     <script src="app.js"></script>
