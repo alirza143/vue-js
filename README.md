@@ -1,4 +1,5 @@
-# This Lession about html dynamic classes
+# This Lession about computed properties 
+these are depend on data, id data changes they will chnage/run the fucntions
 
 # tool use
 
