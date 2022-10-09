@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Vue</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <p>{{title}} - {{author}} - {{age}}</p>  
+        <button v-on:click="age++">Increase Age</button>
+        <button v-on:click="age--">Increase Age</button>
+        <button @click="title='New Title'">Change Title</button>
+        <!-- we can update this protery from app.js -->
+        <button @click="changeTitle">Change Title</button>
+        <!-- we can pass the argument -->
+        <button @click="changeTitleWithArgument('change Title With Argument')">changeTitleWithArgument</button>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
