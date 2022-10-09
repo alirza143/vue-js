@@ -1,6 +1,5 @@
-# In this lesson
-
-We are going to create vue app, using the script
+# This Lession about variable/dynamic
+Every component must have data function which always return data
 
 # tool use
 
@@ -8,6 +7,6 @@ Vs-code
 
 # Extention use 
 
-Live server
-vetur
+Live server,
+vetur,
 Matrial icon theme (optional)
