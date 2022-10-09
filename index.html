@@ -6,26 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Vue</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .box {
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background: #ddd;
+        margin: 20px;
+        display: inline-block;
+        }
+        </style>
 </head>
 <body>
     
     <div id="app">
-        
-        <!-- v-if remove the dom element complete and inject it on true -->
-        <span v-if="showBooks">{{title}}</span>
-        <span v-if="true">- {{author}}</span>
-        <span v-if="true">- {{age}}</span>
-        
+        <div v-if="showBooks">
+            <p>{{title}} {{ author }} -{{ age }}</p>
+        </div>
         <button @click="toggleShowBooks">
             <span v-if="showBooks">Hide Books</span>
-            <span v-if="!showBooks">Show Books</span>
-            <!-- we can use else also -->
-            <span v-else>Show Books else</span>
+            <span v-else>Show Books</span>
         </button>
-
-        <!-- this only use css to display and display-none -->
-        <div v-show="showBooks">{{title}}</div>
-
+        <br>
+        <!-- mouse events -->
+        <div class="box" @mouseover="handleEvent($event,8 )">mouseover (enter)</div>
+        <div class="box" @mouseleave="handleEvent">mouse leave</div>
+        <div class="box" @dblclick="handleEvent">double click</div>
+        <div class="box" @mousemove="handleMouseMove">{{x}} - {{y}}</div>
     </div>
     <script src="app.js"></script>
 </body>
