@@ -1,5 +1,5 @@
-# This Lession about attribute binding/make id dynamic
-usign directive v-bind:<html_attribute>
+# This Lession about html dynamic classes
+
 # tool use
 
 Vs-code

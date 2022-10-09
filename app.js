@@ -5,9 +5,9 @@ const app = Vue.createApp({
             url : "www.google.com",
             showBooks : true,
             books : [
-                { title: 'name of the wind', author: 'patrick rothfuss', img: 'assets/1.jpeg'},
-                { title: 'the way of kings' , author: ' brandon sanderson', img: 'assets/2.jpeg'},
-                {title: 'the final empire' , author: ' brandon sanderson',img: 'assets/3.jpeg' },
+                {id:1, isFav:false,title: 'name of the wind', author: 'patrick rothfuss', img: 'assets/1.jpeg'},
+                {id:2, isFav:true,title: 'the way of kings' , author: ' brandon sanderson', img: 'assets/2.jpeg'},
+                {id:3, isFav:false,title: 'the final empire' , author: ' brandon sanderson',img: 'assets/3.jpeg' },
             ]
         }
     },
@@ -15,6 +15,10 @@ const app = Vue.createApp({
         toggleShowBooks(){
             this.showBooks = !this.showBooks;
         },
+// That is one more way to toggle
+        toggleBook(nook){
+            books.isFav = !books.isFav;
+        }
     }
 });
 
