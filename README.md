@@ -1,6 +1,5 @@
-# This Lession about variable/dynamic
-Every component must have data function which always return data
-
+# This Lession about listing data
+using v-for directive 
 # tool use
 
 Vs-code

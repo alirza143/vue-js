@@ -21,9 +21,11 @@
     
     <div id="app">
         <div v-if="showBooks">
+            <!-- This is not good approuch for longer list -->
             <p>{{ books[0].title }} {{books[0].author }}</p>
             <p>{{ books[1].title }} {{ books[1].author }}</p>
 
+            <!-- use v-for for listing the data -->
             <ul>
                 <li v-for="item in books">{{item.title}} - {{item.author}}</li>
             </ul>
